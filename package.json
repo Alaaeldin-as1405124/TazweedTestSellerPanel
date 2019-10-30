@@ -1,0 +1,66 @@
+{
+  "name": "tazweedadminpanel",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/free-solid-svg-icons": "^5.11.2",
+    "@fortawesome/react-fontawesome": "^0.1.5",
+    "array-move": "^2.1.0",
+    "autobind-decorator": "^2.4.0",
+    "axios": "^0.19.0",
+    "bootstrap": "^4.3.1",
+    "font-awesome": "^4.7.0",
+    "form-data": "^2.5.1",
+    "mdbreact": "^4.21.0",
+    "moment": "^2.24.0",
+    "multer": "^1.4.2",
+    "pretty-checkbox": "^3.0.3",
+    "pretty-checkbox-react": "^1.1.0",
+    "prop-types": "latest",
+    "ramda": "^0.26.1",
+    "react": "^16.10.2",
+    "react-big-scheduler": "^0.2.7",
+    "react-bootstrap": "^1.0.0-beta.12",
+    "react-confirm-alert": "^2.4.1",
+    "react-dnd": "^9.4.0",
+    "react-dnd-html5-backend": "^9.4.0",
+    "react-dom": "^16.10.2",
+    "react-drag-sortable": "^1.0.6",
+    "react-geocode": "^0.2.0",
+    "react-geoinput": "^1.0.3",
+    "react-geosuggest": "^2.12.0",
+    "react-google-autocomplete": "^1.1.2",
+    "react-google-maps": "^9.4.5",
+    "react-location-picker": "^1.5.0",
+    "react-movable": "^2.2.0",
+    "react-router-dom": "^5.1.1",
+    "react-scripts": "3.1.2",
+    "react-sortable": "^2.0.0",
+    "react-sortable-hoc": "^1.10.1",
+    "react-sortable-pane": "^1.1.0",
+    "react-sortablejs": "^1.5.1",
+    "sortablejs": "^1.6.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}
