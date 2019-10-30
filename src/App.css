@@ -24,12 +24,15 @@
   align-self: center;
   align-content: center;
 }
+.login{
+  padding: 50px;
+}
 /* Form styling */
 form {
   background: #f9f9f9;
   border:1px solid #c9e6ff;
   margin: 1em auto 0 auto;
-  padding: 1em;
+  padding: 5px;
 }
 form select,
 form input {

@@ -14,11 +14,9 @@ function RouterComponent() {
         <Router>
             <Switch>
                 <Route exact path="/" component={Home}/>
-                <Route exact path="/register" component={Register}/>
                 <PrivateRoute exact path="/addTimeSlot" component={AddTimeSlot}/>
                 <PrivateRoute exact path="/Appointments" component={Appointments}/>
                 <Route exact path="/Logout" component={Logout}/>
-                <Route exact path="/Login" component={Login}/>
 
 
             </Switch>
@@ -33,7 +31,7 @@ const PrivateRoute = ({component: Component}, ...rest) => (
             baseService.checkLogin()
                 ? <div><NavBar/> <Component {...props} /></div>
                 : <Redirect to={{
-                    pathname: '/login',
+                    pathname: '/',
                     state: {from: props.location}
                 }}/>
         )}
@@ -42,7 +40,7 @@ const PrivateRoute = ({component: Component}, ...rest) => (
 
 const Logout = withRouter(({history}) =>{
         baseService.logout();
-        history.push("/login");
+        history.push("/");
         return null;
 }
 

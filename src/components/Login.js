@@ -30,13 +30,14 @@ class Login extends Component {
         baseService.login(
             {
                 username: this.state.username,
-                password: this.state.password
+                password: this.state.password,
+                seller: true
             }
         ).then((response) => {
             //do the login steps
             //save the token
             //window.localStorage.setItem('token', value);
-            if (response.token) {
+            if (response && response.token) {
                 window.localStorage.setItem('token', response.token);
                 //push the url
                 this.props.history.push('/appointments')
@@ -54,39 +55,37 @@ class Login extends Component {
     onChange = (key, e) => {
         this.setState({[key]: e.target.value});
     };
-
-    moveToRegister = () => {
-        this.props.history.push('/Register');
-    }
+    
 
     render() {
         if (baseService.checkLogin()) {
-            console.log('@login yes iam logged in ');
-            this.props.history.push('/Appointments')
+            //console.log('@login yes iam logged in ');
+            if (this.props && this.props.history)
+                this.props.history.push('/Appointments')
 
         }
         return (
-            <div className="Login">
+            <div>
+                <center>
+                    <h2>Login</h2>
+                </center>
                 <Form>
-                    <Form.Group controlId="formBasicEmail">
-                        <Form.Label>username</Form.Label>
+                    <Form.Group>
+                        <Form.Label>Username</Form.Label>
                         <Form.Control type="text" placeholder="Enter username" value={this.state.username}
                                       onChange={(e) => this.onChange('username', e)}/>
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicPassword">
+                    <Form.Group>
                         <Form.Label>Password</Form.Label>
                         <Form.Control type="password" placeholder="Password" value={this.state.password}
                                       onChange={(e) => this.onChange('password', e)}/>
                     </Form.Group>
 
-                    <Button variant="primary" type="submit" onClick={(e) => this.handleSubmit(e)}>
-                        Login
-                    </Button>
+                    <center>
+                        <Button variant="primary" type="submit" onClick={(e) => this.handleSubmit(e)}>Login</Button>
+                    </center>
 
-                    <Button variant="primary" type="submit" onClick={() => this.moveToRegister()}>
-                        Register Now
-                    </Button>
                 </Form>
             </div>
         );

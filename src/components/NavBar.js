@@ -8,9 +8,6 @@ export default function NavBar() {
                 <a className="navbar-brand" href="#">Tazweed Admin panel</a>
                 <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
                     <li className="nav-item">
-                        <Link to={'/'} className="nav-link"> Home </Link>
-                    </li>
-                    <li className="nav-item">
                         <Link to={'/appointments'} className="nav-link"> Appointments </Link>
                     </li>
                     <li className="nav-item">
