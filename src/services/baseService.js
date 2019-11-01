@@ -1,4 +1,4 @@
-const WebApiBaseUrl = `http://127.0.0.1:8000/api`;
+const WebApiBaseUrl = `http://tazweed.ay-legend.com:8000/api`;
 
 export default class BaseService {
 
@@ -151,6 +151,7 @@ export default class BaseService {
             body: JSON.stringify(user)
         });
 
+        console.log('reg ',authUser)
         if (authUser.ok)
             return await authUser.json();
         else

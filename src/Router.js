@@ -16,6 +16,7 @@ function RouterComponent() {
                 <Route exact path="/" component={Home}/>
                 <PrivateRoute exact path="/addTimeSlot" component={AddTimeSlot}/>
                 <PrivateRoute exact path="/Appointments" component={Appointments}/>
+                <Route exact path="/Login" component={Login}/>
                 <Route exact path="/Logout" component={Logout}/>
 
 

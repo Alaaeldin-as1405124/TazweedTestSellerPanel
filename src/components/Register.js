@@ -27,9 +27,19 @@ class Register extends Component {
 
         let result = await baseService.register(user);
         if (!result) {
-            alert('failed to register')
+            alert('failed to register');
         } else {
             alert('Registered successfully');
+            //reset state
+            this.setState({
+                username: '',
+                password: '',
+                type: 2,
+                name: '',
+                nameAr: '',
+                desc: '',
+                descAr: '',
+            });
             this.props.history.push('/Login');
         }
 
